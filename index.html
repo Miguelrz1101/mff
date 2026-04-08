@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Mónaco Fusión Food</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Mónaco Fusión Food</h1>
+<p>Pastas • Hamburguesas • Pizza</p>
+
+</header>
+
+<section id="menu"></section>
+
+<div class="cart">
+
+<h3>Tu pedido</h3>
+
+<div id="cartItems"></div>
+
+<strong>Total: $<span id="total">0</span></strong>
+
+<button onclick="sendOrder()">Pedir por WhatsApp</button>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
